@@ -34,3 +34,9 @@ void Pessoa::leitura(){
     cin >> Idade;
     this->setIdade(Idade);
 }
+string Pessoa::aniversarioEmail(){
+    return "";
+}
+int Pessoa::AmigoConhecido(){
+    return 0;
+}

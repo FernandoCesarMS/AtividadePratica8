@@ -37,6 +37,8 @@ public:
     // pessoa
     virtual void print();
     virtual void leitura();
+    virtual string aniversarioEmail();
+    virtual int AmigoConhecido();
 };
 
 #endif

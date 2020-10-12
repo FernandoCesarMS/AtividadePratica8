@@ -21,3 +21,9 @@ void Conhecido::leitura(){
     cin >> Email;
     this->setEmail(Email);
 }
+string Conhecido::aniversarioEmail(){
+    return this->email;
+}
+int Conhecido::AmigoConhecido(){
+    return 2;
+}

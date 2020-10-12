@@ -18,7 +18,13 @@ void Amigo::print(){
 void Amigo::leitura(){
     Pessoa::leitura();
     cout << "Data Aniversario: ";
-    string dataAniversario;
-    cin >> dataAniversario;
-    this->setDataAniversario(dataAniversario);
+    string dtAniversario;
+    cin >> dtAniversario;
+    this->setDataAniversario(dtAniversario);
+}
+string Amigo::aniversarioEmail(){
+    return this->dataAniversario;
+}
+int Amigo::AmigoConhecido(){
+    return 1;
 }

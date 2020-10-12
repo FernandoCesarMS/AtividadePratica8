@@ -47,6 +47,21 @@ void Agenda::listaPessoas(){
     for (int i=0;i<pessoas.size();i++){
         pessoas[i]->print();
     }
+    cout << endl;
 }
-void imprimeAniversarios();
-void imprimeEmail();
+void Agenda::imprimeAniversarios(){
+    cout << "Aniversario: " << endl;
+    for (int i=0;i<pessoas.size();i++){
+        if (pessoas[i]->AmigoConhecido() == 1)
+            cout << pessoas[i]->aniversarioEmail() << endl;
+    }
+    cout << endl;
+}
+void Agenda::imprimeEmail(){
+    cout << "Emails: " << endl;
+    for (int i=0;i<pessoas.size();i++){
+        if (pessoas[i]->AmigoConhecido() == 2)
+            cout << pessoas[i]->aniversarioEmail() << endl;
+    }
+    cout << endl;
+}

@@ -30,6 +30,8 @@ public:
     // pessoa
     void print();
     void leitura();
+    string aniversarioEmail();
+    int AmigoConhecido();
 };
 
 #endif
