@@ -20,6 +20,7 @@ public:
 
     // setters
 
+    // altera a data de aniversário
     void setDataAniversario(string);
 
     // another methods
