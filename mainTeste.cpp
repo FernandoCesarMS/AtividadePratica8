@@ -1,6 +1,10 @@
 #include "Pessoa.cpp"
+#include "Amigo.cpp"
 #include <iostream>
+#include <vector>
+
 int main(){
-    Pessoa newPessoa = *new Pessoa("Fernando",21);
-    newPessoa.print();
+    Amigo amigo;
+    Pessoa *pessoa = &amigo;
+    pessoa->print();
 }

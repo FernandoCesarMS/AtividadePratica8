@@ -1,3 +1,5 @@
+#ifndef Pessoa_HPP
+#define Pessoa_HPP
 #include <string>
 
 using namespace std;
@@ -29,5 +31,11 @@ public:
     // Altera a idade
     void setIdade(int);
 
-    void print();
+    // another methods
+
+    // Printa para o usuário as informações da
+    // pessoa
+    virtual void print();
 };
+
+#endif

@@ -22,5 +22,5 @@ void Pessoa::setIdade(int Idade){
 }
 void Pessoa::print(){
     cout << "Nome: " << this->getNome() << endl;
-    cout << "Idade: " << this->getIdade() << endl;
+    cout << "Idade: " << this->getIdade() << endl << endl;
 }

@@ -1,6 +1,5 @@
-#include "Pessoa.hpp"
 
-class Conhecido : public Pessoa{
+class Conhecido{
     private:
 
     public:
