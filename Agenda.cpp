@@ -42,15 +42,29 @@ void Agenda::addInformacoes(){
         pessoas[i]->leitura();
     }
 }
+
 void Agenda::listaPessoas(){
-    cout << "Nome         |    Idade    | Outro" << endl;
+    vector <string> nomes;
+    int maior = 0;
     for (int i=0;i<pessoas.size();i++){
-        pessoas[i]->print();
+        if (pessoas[i]->getNome().size() > maior)
+            maior = pessoas[i]->getNome().size();
+    }
+    cout << endl;
+    if (maior>4)
+        for (int i=0;i<maior-4;i++)
+            cout << " ";
+    cout << "Nome| Idade | Outro" << endl;
+    for (int i=0;i<pessoas.size();i++){
+        if (pessoas[i]->getNome().size() != maior)
+            for (int j=0; j< (maior-pessoas[i]->getNome().size());j++)
+                cout << " ";
+        cout << pessoas[i]->getNome() << "|   " << pessoas[i]->getIdade() << "  | " << pessoas[i]->aniversarioEmail() << endl;
     }
     cout << endl;
 }
 void Agenda::imprimeAniversarios(){
-    cout << "Aniversario: " << endl;
+    cout << "Aniversarios: " << endl;
     for (int i=0;i<pessoas.size();i++){
         if (pessoas[i]->AmigoConhecido() == 1)
             cout << pessoas[i]->aniversarioEmail() << endl;
