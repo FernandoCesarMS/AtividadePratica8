@@ -11,7 +11,14 @@ void Amigo::setDataAniversario(string dA){
     this->dataAniversario = dA;
 }
 void Amigo::print(){
-    cout << "Nome: " << this->getNome() << endl;
-    cout << "Idade: " << this->getIdade() << endl;
-    cout << "Data Aniversario: " << this->getDataAniversario() << endl << endl;
+    cout << this->getNome() << " ";
+    cout << this->getIdade() << " ";
+    cout << this->getDataAniversario() << endl;
+}
+void Amigo::leitura(){
+    Pessoa::leitura();
+    cout << "Data Aniversario: ";
+    string dataAniversario;
+    cin >> dataAniversario;
+    this->setDataAniversario(dataAniversario);
 }

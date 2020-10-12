@@ -1,3 +1,5 @@
+#ifndef Amigo_HPP
+#define Amigo_HPP
 #include "Pessoa.hpp"
 
 class Amigo : public Pessoa
@@ -7,7 +9,6 @@ private:
     string dataAniversario;
 
 public:
-
     // construtores
 
     // Construtor padrão
@@ -28,4 +29,7 @@ public:
     // Printa para o usuário as informações da
     // pessoa
     void print();
+    void leitura();
 };
+
+#endif

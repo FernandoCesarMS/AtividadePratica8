@@ -10,7 +10,14 @@ void Conhecido::setEmail(string Email){
     this->email = Email;
 }
 void Conhecido::print(){
-    cout << "Nome: " << this->getNome() << endl;
-    cout << "Idade: " << this->getIdade() << endl;
-    cout << "Email: " << this->email << endl << endl;
+    cout << this->getNome() << " ";
+    cout << this->getIdade() << " ";
+    cout << this->email << endl;
+}
+void Conhecido::leitura(){
+    Pessoa::leitura();
+    cout << "Email: ";
+    string Email;
+    cin >> Email;
+    this->setEmail(Email);
 }

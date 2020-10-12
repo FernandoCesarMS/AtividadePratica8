@@ -24,3 +24,13 @@ void Pessoa::print(){
     cout << "Nome: " << this->getNome() << endl;
     cout << "Idade: " << this->getIdade() << endl << endl;
 }
+void Pessoa::leitura(){
+    cout << "Nome: ";
+    string Nome;
+    cin >> Nome;
+    this->setNome(Nome);
+    int Idade;
+    cout << "Idade: ";
+    cin >> Idade;
+    this->setIdade(Idade);
+}

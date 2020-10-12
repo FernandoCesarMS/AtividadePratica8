@@ -1,14 +1,13 @@
 #include "Pessoa.cpp"
 #include "Amigo.cpp"
 #include "Conhecido.cpp"
+#include "Agenda.cpp"
 #include <iostream>
 #include <vector>
-
+#include <stdlib.h>
 int main()
 {
-    vector<Pessoa *> pessoas;
-    for (int i = 0; i < pessoas.size(); i++)
-    {
-        pessoas[i]->print();
-    }
+    Agenda agenda(3);
+    agenda.addInformacoes();
+    agenda.listaPessoas();
 }

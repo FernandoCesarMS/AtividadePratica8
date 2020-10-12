@@ -1,3 +1,6 @@
+#ifndef Agenda_HPP
+#define Agenda_HPP
+
 #include "Pessoa.hpp"
 #include "Amigo.hpp"
 #include "Conhecido.hpp"
@@ -6,9 +9,9 @@
 class Agenda
 {
 private:
-    vector<Pessoa> pessoas;
     int quantidadeAmigos;
     int quantidadeConhecidos;
+    vector<Pessoa *> pessoas = *new vector<Pessoa *>();
 
 public:
     // construtores
@@ -20,10 +23,12 @@ public:
 
     int getAmigos();
     int getConhecidos();
-    vector<Pessoa> getPessoas();
-    Pessoa getPessoa(int);
-    void setPessoa(Pessoa,int);
+    vector<Pessoa *> getPessoas();
+    void setPessoa(Pessoa, int);
     void addInformacoes();
     void imprimeAniversarios();
     void imprimeEmail();
+    void listaPessoas();
 };
+
+#endif

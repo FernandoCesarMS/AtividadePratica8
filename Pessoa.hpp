@@ -36,6 +36,7 @@ public:
     // Printa para o usuário as informações da
     // pessoa
     virtual void print();
+    virtual void leitura();
 };
 
 #endif

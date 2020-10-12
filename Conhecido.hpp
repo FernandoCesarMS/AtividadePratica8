@@ -1,3 +1,6 @@
+#ifndef Conhecido_HPP
+#define Conhecido_HPP
+
 #include "Pessoa.hpp"
 
 class Conhecido : public Pessoa
@@ -27,4 +30,7 @@ public:
     // Printa para o usuário as informações da
     // pessoa
     void print();
+    void leitura();
 };
+
+#endif
