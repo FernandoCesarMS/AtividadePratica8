@@ -1,6 +1,7 @@
 #include "Agenda.hpp"
 #include <stdlib.h>
 #include <iostream>
+#include <ctime>
 Agenda::Agenda()
 {
     quantidadeAmigos = 0;
@@ -8,6 +9,7 @@ Agenda::Agenda()
 }
 Agenda::Agenda(int quantidadePessoas)
 {
+    srand((unsigned int) time (NULL));
     this->quantidadeAmigos = 0;
     this->quantidadeConhecidos = 0;
     for (int i = 0; i < quantidadePessoas; i++)
