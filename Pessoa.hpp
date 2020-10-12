@@ -2,8 +2,7 @@
 
 using namespace std;
 
-class Pessoa
-{
+class Pessoa{
 private:
     string nome;
     int idade;
@@ -29,4 +28,6 @@ public:
     void setNome(string);
     // Altera a idade
     void setIdade(int);
+
+    void print();
 };

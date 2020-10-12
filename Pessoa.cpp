@@ -1,5 +1,5 @@
 #include "Pessoa.hpp"
-
+#include <iostream>
 Pessoa::Pessoa(){
     this->nome = "indefinido";
     this->idade = 0;
@@ -19,4 +19,8 @@ void Pessoa::setNome(string Nome){
 }
 void Pessoa::setIdade(int Idade){
     this->idade = Idade;
+}
+void Pessoa::print(){
+    cout << "Nome: " << this->getNome() << endl;
+    cout << "Idade: " << this->getIdade() << endl;
 }
