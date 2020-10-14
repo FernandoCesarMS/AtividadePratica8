@@ -15,33 +15,14 @@ int main()
     Agenda Agenda1(quantidadePessoas);
 
     int x, y;
-    x = getAmigos();
-    y = getConhecidos();
+    x = Agenda1.getAmigos();
+    y = Agenda1.getConhecidos();
 
-    std::cout<<"Voce tem"<<x<<"amigos nessa lista e"<<y<<"conhecidos."<<endl;
+    std::cout<<"Voce tem "<<x<<" amigos nessa lista e "<<y<<" conhecidos."<<endl;
 
-    addInformacoes();
-
-    for(int i; i<quantidadePessoas;i++){
-
-        if(pessoas[i] == Amigo){
-
-            getDataAniversario();
-
-        }
-    }
-
-    for(int i; i<quantidadePessoas;i++){
-
-        if(pessoas[i] == Conhecido){
-
-            getEmail();
-
-        }
-    }
-
-
-
+    Agenda1.addInformacoes();
+    Agenda1.imprimeAniversarios();
+    Agenda1.imprimeEmail();
 
     return 0;
 }
