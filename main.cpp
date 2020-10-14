@@ -2,18 +2,46 @@
 
 #include <iostream>
 #include <ctime>
+#include "Agenda.cpp"
+#include "Amigo.cpp"
+#include "Conhecido.cpp"
+#include "Pessoa.cpp"
 
 int main()
 {
-    srand((unsigned int) time (NULL)); //activates the generator
-    //...
-    int a = rand()%10;        //gives a random from 0 to 9
+    int quantidadePessoas;
+    std::cout<<"Insira o numero de pessoas que deseja colocar na agenda"<<endl;
+    std::cin>>quantidadePessoas;
+    Agenda Agenda1(quantidadePessoas);
 
-    double r = ((double) rand() / (RAND_MAX));        //gives a random from 0 to 1
+    int x, y;
+    x = getAmigos();
+    y = getConhecidos();
 
-    int max, min;
-    //...
-    int c = (rand()%(max - min)) + min;              //gives a random from min to max
-    //...
+    std::cout<<"Voce tem"<<x<<"amigos nessa lista e"<<y<<"conhecidos."<<endl;
+
+    addInformacoes();
+
+    for(int i; i<quantidadePessoas;i++){
+
+        if(pessoas[i] == Amigo){
+
+            getDataAniversario();
+
+        }
+    }
+
+    for(int i; i<quantidadePessoas;i++){
+
+        if(pessoas[i] == Conhecido){
+
+            getEmail();
+
+        }
+    }
+
+
+
+
     return 0;
 }
